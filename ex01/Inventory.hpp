@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include "Entity.hpp"
+#include <initializer_list>
 
 class Inventory {
 public:
@@ -14,4 +14,6 @@ private:
     std::string  m_owner;
     std::size_t  m_count;
     std::string* m_items;   // new std::string[m_count] of item names, freed in ~Inventory
+
+    std::string itemList() const;   // "(dagger, gold, torch)" for the trace lines
 };
